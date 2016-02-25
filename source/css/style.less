@@ -1,0 +1,246 @@
+//Main color definitions
+@text-color: #000000;
+@highlight-color: #ff00cc;
+@images: "../gfx";
+
+@import (less) "fonts.less";
+@import (css) "bootstrap.min.css";
+
+.breakpoint-small(@rules) {
+  @media screen and (max-width: 500px) { @rules(); }
+}
+
+/*
+* Also a comment, block level
+* The magic starts here
+*/
+
+//Comment
+
+html, body {
+	font-family: "soleil",Arial,sans-serif;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+    transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -webkit-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;	
+}
+
+//Serves CSS sticky footer
+html {
+    position: relative;
+    min-height: 100%;	
+}
+//Serves CSS sticky footer: height footer + extra margin on top of footer
+body {
+	margin-bottom: 130px;
+}
+
+header {
+	background: #eee;
+	text-align: center;
+	#head {
+		margin: 0 auto;
+		max-width: 900px;		
+		border-bottom: 5px solid #ddd;		
+		h1 {
+			font-family: "soleil", arial, sans-serif;
+			font-size: 64px;
+			font-weight: 700;
+			margin: 0;
+			padding: 50px 100px;
+			.breakpoint-small({
+				font-size: 32px;
+				padding: 20px 20px;
+			});			
+		}	
+		ul#navigation {
+			list-style: none;
+			overflow: auto;
+			margin: 0; padding: 0;
+		}	
+		ul#navigation li {
+			display: inline-block;	
+			margin-right: 0px;
+			padding: 15px 0px;
+		}	
+		ul#navigation a {
+			color: #888;
+			text-decoration: none;
+			margin-right: 20px;
+		}	
+		ul#navigation a:hover, ul#navigation a.active {	
+			color: #000;	
+		}				
+		ul#navigation li:last-child a  {
+			margin-right: 0;
+		}	
+	}
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;	
+	background: #eee;
+	text-align: center;
+	#foot {
+		margin: 0 auto;
+		max-width: 580px;		
+		border-top: 5px solid #ddd;		
+		ul.networks {
+			list-style: none;
+			overflow: auto;
+			margin: 0; padding: 0;
+		}
+		ul.networks li {
+			display: inline-block;	
+			margin-right: 0px;
+			padding: 15px 0px;
+		}
+		ul.networks li:last-child a  {
+			margin-right: 0;
+		}		
+		ul.networks a {
+			color: #888;
+			text-decoration: none;
+			margin-right: 20px;
+		}	
+		ul.networks a:hover {	
+			color: #000;	
+		}
+		.network-name {
+			.breakpoint-small({
+				display: none;
+			});				
+		}
+	}	
+}
+
+section {
+	.content {	
+		margin: 0 auto;
+		padding-top: 50px;
+		max-width: 580px;
+		.breakpoint-small({
+			padding-top: 40px;
+		});					
+		p, ul {
+			text-align: left;
+			margin: 0px 10px 20px 10px;
+		}
+		ul.work li {
+			margin-bottom: 15px;
+		}
+		p.small {
+			font-size: 14px;
+		}
+		p.colophon {
+			color: #444;
+			margin: 0px 80px 20px 80px;
+		}	
+		p.centered {
+			text-align: center;
+		}	
+		p.c2a {
+			margin-top: 30px;
+			font-weight: 700;
+		}		
+		ul {
+			margin: 0px 0px 20px 0px;
+		}
+		h2:first-child {
+			margin-top: 0px;
+		}
+	}
+}
+
+#colophon {	
+	.content {
+		border-top: 1px solid #ddd;
+		padding-top: 0px;
+		margin-top: 80px;
+	}
+}
+
+#intro {
+	p {
+		font-size: 22px;
+		.breakpoint-small({
+			font-size: 18px;
+		});			
+	}	
+}
+
+/*
+* Default typography
+*/
+
+//FOUT fix for Typekit
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading p, .wf-loading ul {
+	visibility: hidden;
+}
+
+.wf-active h1, .wf-active h2, .wf-active h3, .wf-active p, .wf-active ul, 
+.wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive p, .wf-inactive ul {
+	visibility: visible;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 22px;
+	border: 5px solid #000;
+	padding: 5px 10px 7px 10px;	
+	margin: 30px 10px 20px 10px;
+	background-color: #000;
+	color: #fff;		
+}
+
+h3 {
+	display: inline-block;
+	font-size: 16px;
+	border: 5px solid #444;
+	padding: 4px 10px 7px 10px;	
+	margin: 20px 10px 20px 10px;
+	background-color: #444;
+	color: #fff;		
+}
+
+
+
+
+/*
+* Links
+*/
+
+a {
+	color: #000;
+	text-decoration: underline;
+    transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+    -webkit-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;		
+}
+
+a:hover {
+	color: #000;
+}
+
+a.button {
+	font-size: 22px;
+	display: inline-block;
+	border: 5px solid #ddd;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	color: #888;
+	text-decoration: none;
+}
+
+a.button:hover {
+	border-color: #000;
+	background-color: #000;
+	color: #fff;	
+}

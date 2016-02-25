@@ -1,0 +1,26 @@
+ReWriteEngine On
+
+#Turn off magic quotes
+php_flag magic_quotes_gpc Off
+
+#RewriteCond %{HTTP_HOST} !^www.tomvangemert.net$ [NC]
+#RewriteRule ^(.*) http://www.tomvangemert.net/$1 [L,R=301]
+
+#Rewrite dynamic sitemap.xml file
+RewriteRule ^sitemap.xml$ /web/dynsitemap.php
+
+RewriteRule ^home(.*)$ / [R=301,NC,L]
+
+#block access from the libwww-perl user-agent
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+RewriteRule .* – [F,L]
+
+#URL rewrite
+RewriteRule ^([A-Za-z0-9\-_/]*)$ /web/index.php
+RewriteRule ^$ /web/index.php
+
+#Gzip filetypes
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript font/woff font/otf font/eot font/ttf
+</ifmodule>
+#End Gzip
