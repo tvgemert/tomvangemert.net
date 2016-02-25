@@ -38,6 +38,71 @@ body {
 	margin-bottom: 130px;
 }
 
+
+
+
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 1000px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateY(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateY(0deg);
+  animation: cd-rotate-1-in 1s;
+}
+ 
+.cd-headline.rotate-1 b.is-hidden {
+  transform: rotateY(180deg);
+  animation: cd-rotate-1-out 1s;
+}
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateY(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+ 
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateY(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+
+
 header {
 	background: #eee;
 	text-align: center;
