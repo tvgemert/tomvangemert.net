@@ -22,18 +22,16 @@ $(document).ready(function() {
 		});		
 		e.preventDefault();		
 	});	
-	
-	var animationDelay = 100;
-	 
-	$('h1').hover(function(e){	 
-		animateHeadline($('.cd-headline'));
-	});
+		 
+	$('h1').hover(function(){
+		animateHeadline($('.cd-headline'));		
+	})
 	 
 	function animateHeadline($headlines) {
 		$headlines.each(function(){
 			var headline = $(this);
 			//trigger animation
-			setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
+			setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, 100);
 			//other checks here ...
 		});
 	}	
