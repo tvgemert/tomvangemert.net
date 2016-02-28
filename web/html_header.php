@@ -15,8 +15,6 @@
 
 	<title>Tom van Gemert. Web developer in Berlin, Germany.</title>
 
-	<link rel="shortcut icon" href="favicon.ico">
-
 	<link rel="stylesheet" href="/web/css/style.min.css" media="all">
 	
 	<script>document.documentElement.className += ' wf-loading';</script>

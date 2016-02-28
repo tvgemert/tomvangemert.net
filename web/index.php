@@ -51,18 +51,18 @@
 	}
 
 	include('functions.php');	
-if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
-{
-	include('html_header.php');
-	include('header.php');
-	//include('navigation.inc.php');
-}
+	if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
+	{
+		include('html_header.php');
+		include('header.php');
+	}
+	
 	include($include);	
-
-if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
-{
- 	if ($showFooter) include('footer.php');
-	include('html_footer.php');
-}
+	
+	if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
+	{
+	 	if ($showFooter) include('footer.php');
+		include('html_footer.php');
+	}
 
 	

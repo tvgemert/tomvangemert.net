@@ -30,7 +30,7 @@
 					<b>Interested in working with me?<br/>Feel free to get in touch</b>
 				</p>
 				<a href="/contact" class="button">contact me</a>
-				<p class="centered small"><a href="/work">take a look at some of the projects I've worked on</a></p>				
+				<p class="centered small"><a href="/work" data-page="work" class="nav">take a look at some of the projects I've worked on</a></p>				
 			</div>
 		</section>
 		<section id="colophon">

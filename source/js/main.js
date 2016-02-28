@@ -1,3 +1,4 @@
+//TypeKit async loading
 (function(d) {
 	var config = {
 		kitId: 'bod2caf',
@@ -9,22 +10,27 @@
 	  
 $(document).ready(function() {
 	
-	$('#btn-about-me').on('click',function(e){
-		
+/*
+	$('.nav').on('click',function(e){				
+		var target = $(this).data('page');
+		$('.nav').removeClass('active');
+		$(this).addClass('active');		
 	   	$.ajax({
 			type: 'get',
-			url: '/about',
+			url: '/'+target,
 			success: function(result){
-				$('#intro').fadeOut('fast',function(){
+				$('#container section').fadeOut('fast',function(){
 					$('#container').html(result);
 				});			
 			}								
 		});		
 		e.preventDefault();		
 	});	
+*/
 		 
+	//Flipping header animation	 
 	$('h1').hover(function(){
-		animateHeadline($('.cd-headline'));		
+		animateHeadline($('.headline'));		
 	})
 	 
 	function animateHeadline($headlines) {
@@ -32,7 +38,6 @@ $(document).ready(function() {
 			var headline = $(this);
 			//trigger animation
 			setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, 100);
-			//other checks here ...
 		});
 	}	
 	function hideWord($word) {
