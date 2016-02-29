@@ -10,23 +10,43 @@
 	  
 $(document).ready(function() {
 	
-/*
 	$('.nav').on('click',function(e){				
-		var target = $(this).data('page');
+		href = $(this).attr("href");
+		if (!!(window.history && history.pushState)) {
+			history.pushState(null, document.title, href);
+		}		
+		loadContent(href);			
+		e.preventDefault();		
+	});	
+	
+	function loadContent(href) {
+		//Read and split the current URL
+		hrefparts = href.split('/');
+		//var target = $(this).data('page');
 		$('.nav').removeClass('active');
-		$(this).addClass('active');		
+		$('.nav[data-page = '+hrefparts[1]+']').addClass('active');
+		//$(this).addClass('active');	
+		
 	   	$.ajax({
 			type: 'get',
-			url: '/'+target,
+			url: href,
 			success: function(result){
 				$('#container section').fadeOut('fast',function(){
 					$('#container').html(result);
 				});			
 			}								
 		});		
-		e.preventDefault();		
-	});	
-*/
+	}
+	
+	//On clicking back and forward.
+	//First check for history existence to prevent script errors in IE
+	//IE 9< uses page reloads as a fallback.
+	if (!!(window.history && history.pushState)) {
+		window.addEventListener('popstate', function(event) {
+			href = document.location.pathname;
+			loadContent(href);
+		});
+	}	
 		 
 	//Flipping header animation	 
 	$('h1').hover(function(){

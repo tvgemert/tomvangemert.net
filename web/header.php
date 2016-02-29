@@ -10,7 +10,7 @@
 					</a>
 				</h1>
 			<ul id="navigation">
-				<li><a data-page ="home" href="/" class="nav<?=($params['get0'] == '') ? ' active' : '';?>">home</a></li>
+				<li><a data-page ="" href="/" class="nav<?=($params['get0'] == '') ? ' active' : '';?>">home</a></li>
 				<li><a data-page ="about" href="/about" class="nav<?=($params['get0'] == 'about') ? ' active' : '';?>">about me</a></li>
 				<li><a data-page ="skills" href="/skills" class="nav<?=($params['get0'] == 'skills') ? ' active' : '';?>">skills</a></li>
 				<li><a data-page ="contact" href="/contact" class="nav<?=($params['get0'] == 'contact') ? ' active' : '';?>">contact</a></li>				
