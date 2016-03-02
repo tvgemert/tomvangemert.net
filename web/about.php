@@ -14,6 +14,6 @@
 				<p class="centered c2a">
 					<b>Want to know more about how I work?<br/>Take a look at my</b>
 				</p>
-				<a href="/skills" class="button">skills and experience</a>
+				<a href="/skills" class="nav button">skills and experience</a>
 			</div>
 		</section>

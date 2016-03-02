@@ -29,7 +29,7 @@
 				<p class="centered" style="margin-top: 30px;">
 					<b>Interested in working with me?<br/>Feel free to get in touch</b>
 				</p>
-				<a href="/contact" class="button">contact me</a>
+				<a href="/contact" data-page="contat" class="nav button">contact me</a>
 				<p class="centered small"><a href="/work" data-page="work" class="nav">take a look at some of the projects I've worked on</a></p>				
 			</div>
 		</section>

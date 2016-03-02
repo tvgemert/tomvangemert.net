@@ -10,22 +10,22 @@
 	  
 $(document).ready(function() {
 	
-	$('.nav').on('click',function(e){				
+	$(document).on('click','.nav',function(e){				
+		e.preventDefault();		
 		href = $(this).attr("href");
 		if (!!(window.history && history.pushState)) {
 			history.pushState(null, document.title, href);
 		}		
-		loadContent(href);			
-		e.preventDefault();		
+		loadContent(href);					
 	});	
 	
 	function loadContent(href) {
 		//Read and split the current URL
 		hrefparts = href.split('/');
-		//var target = $(this).data('page');
+		if (hrefparts[1]=='') hrefparts[1] = 'home';
+		
 		$('.nav').removeClass('active');
 		$('.nav[data-page = '+hrefparts[1]+']').addClass('active');
-		//$(this).addClass('active');	
 		
 	   	$.ajax({
 			type: 'get',
@@ -63,7 +63,6 @@ $(document).ready(function() {
 	function hideWord($word) {
 		var nextWord = takeNext($word);
 		switchWord($word, nextWord);
-		//setTimeout(function(){ hideWord(nextWord) }, animationDelay);
 	}
 	 
 	function takeNext($word) {
