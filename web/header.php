@@ -1,7 +1,7 @@
 	<header>
 		<div id="head">
 				<h1 class="headline rotate-1">
-					<a href="/">
+					<a href="/" class="nav">
 						Tom van Gemert<br/>web developer based in berlin. I develop 
 						<span class="words-wrapper">
 							<b class="is-visible">back to front</b>

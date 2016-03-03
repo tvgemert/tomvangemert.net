@@ -116,21 +116,23 @@ header {
 			font-size: 64px;
 			font-weight: 700;
 			margin: 0;
-			padding: 50px 100px;
+			padding: 54px 100px;
 			.breakpoint-small({
 				font-size: 32px;
 				padding: 20px 20px;
 			});			
 		}	
 		ul#navigation {
+			text-align: center;
 			list-style: none;
 			overflow: auto;
 			margin: 0; padding: 0;
 		}	
-		ul#navigation li {
+		ul#navigation li {			
 			display: inline-block;	
 			margin-right: 0px;
-			padding: 15px 0px;
+			padding-bottom: 15px;
+			padding-top: 15px;
 		}	
 		ul#navigation a {
 			color: #888;
@@ -143,6 +145,42 @@ header {
 		ul#navigation li:last-child a  {
 			margin-right: 0;
 		}	
+	}
+}
+
+section {
+	.content {	
+		margin: 0 auto;
+		padding-top: 54px;
+		max-width: 580px;
+		.breakpoint-small({
+			padding-top: 40px;
+		});					
+		ul.work li {
+			margin-bottom: 15px;
+		}
+		p.small {
+			font-size: 14px;
+			line-height: 23px;
+			margin: 0px 10px 23px 10px;
+		}
+		p.colophon {
+			color: #444;
+			margin-left: 80px;
+			margin-right: 80px;
+		}	
+		p.centered {
+			text-align: center;
+		}	
+		p.c2a {
+			font-weight: 700;
+		}		
+		ul {
+			margin: 0px 0px 27px 0px;
+		}
+		h2:first-child {
+			margin-top: 0px;
+		}
 	}
 }
 
@@ -186,57 +224,22 @@ footer {
 	}	
 }
 
-section {
-	.content {	
-		margin: 0 auto;
-		padding-top: 50px;
-		max-width: 580px;
-		.breakpoint-small({
-			padding-top: 40px;
-		});					
-		p, ul {
-			text-align: left;
-			margin: 0px 10px 20px 10px;
-		}
-		ul.work li {
-			margin-bottom: 15px;
-		}
-		p.small {
-			font-size: 14px;
-		}
-		p.colophon {
-			color: #444;
-			margin: 0px 80px 20px 80px;
-		}	
-		p.centered {
-			text-align: center;
-		}	
-		p.c2a {
-			margin-top: 30px;
-			font-weight: 700;
-		}		
-		ul {
-			margin: 0px 0px 20px 0px;
-		}
-		h2:first-child {
-			margin-top: 0px;
-		}
-	}
-}
-
 #colophon {	
 	.content {
 		border-top: 1px solid #ddd;
 		padding-top: 0px;
-		margin-top: 80px;
+		margin-top: 81px;
 	}
 }
 
 #intro {
 	p {
 		font-size: 22px;
+		line-height: 32px;
+		margin-bottom: 32px;
 		.breakpoint-small({
 			font-size: 18px;
+			line-height: 27px;
 		});			
 	}	
 }
@@ -244,6 +247,12 @@ section {
 /*
 * Default typography
 */
+
+p, ul {
+	line-height: 27px;	
+	text-align: left;
+	margin: 0px 10px 27px 10px;
+}
 
 //FOUT fix for Typekit
 .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading p, .wf-loading ul {
@@ -258,9 +267,10 @@ section {
 h2 {
 	display: inline-block;
 	font-size: 22px;
+	line-height: 32px;
 	border: 5px solid #000;
-	padding: 5px 10px 7px 10px;	
-	margin: 30px 10px 20px 10px;
+	padding: 1px 10px 3px 10px;	
+	margin: 27px 10px 27px 10px;
 	background-color: #000;
 	color: #fff;		
 }
@@ -268,9 +278,10 @@ h2 {
 h3 {
 	display: inline-block;
 	font-size: 16px;
+	line-height: 25px;
 	border: 5px solid #444;
-	padding: 4px 10px 7px 10px;	
-	margin: 20px 10px 20px 10px;
+	padding: 1px 10px 3px 10px;	
+	margin: 25px 10px 25px 10px;
 	background-color: #444;
 	color: #fff;		
 }
@@ -282,7 +293,8 @@ h3 {
 * Links
 */
 
-a {
+a, 
+a:link {
 	color: #000;
 	text-decoration: underline;
     transition: color .2s ease-out;
@@ -291,26 +303,32 @@ a {
     -o-transition: color .2s ease-out;		
 }
 
-a:hover, a:active {
+a:hover, 
+a:active, 
+a:visited {
 	color: #000;
 }
 
-h1 a {
+h1 a, 
+h1 a:link {
 	color: #333;
 	text-decoration: none;
 }
 
-h1 a:hover, h1 a:active {
+h1 a:hover, 
+h1 a:active, 
+h1 a:visited {
 	color: #333;	
 	text-decoration: none;	
 }
 
 a.button {
 	font-size: 22px;
+	line-height: 32px;
 	display: inline-block;
 	border: 5px solid #ddd;
-	padding: 5px 10px;
-	margin-bottom: 20px;
+	padding: 1px 10px 3px 10px;
+	margin-bottom: 27px;
 	color: #888;
 	text-decoration: none;
 }

@@ -26,7 +26,7 @@
 					<li>Object Oriented Programming. Webserver management (<abbr title="Linux, Apache, MySQL, PHP">LAMP</abbr>). Version control (GIT).</li>
 					<li>Content redirection and advice. E-mail design, strategy and development. Data analysis (i.e. SEO)</li>
 				</ul>
-				<p class="centered" style="margin-top: 30px;">
+				<p class="centered">
 					<b>Interested in working with me?<br/>Feel free to get in touch</b>
 				</p>
 				<a href="/contact" data-page="contat" class="nav button">contact me</a>
