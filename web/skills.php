@@ -4,7 +4,7 @@
 					I am an experienced web developer who enjoys working on the complete process of product creation. I like to work with multidisciplinary teams that have an open attitude and allow space for discussion and experimentation.
 				</p>				
 				<h2>how I work</h2>
-				<p>Basic principles as starting points from which I work.</p>
+				<p>I work both freelance and on contract basis. At the moment I am available and I'm interested to <a href="/contact" data-page="contact" class="nav">hear about your project</a>! In my working method I always handle these basic principles as starting points.</p>
 				<ul>
 					<li>Open source. I love the open internet</li>
 					<li>Web standards. Creating accessible and usable web products</li>

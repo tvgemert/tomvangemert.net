@@ -9,7 +9,7 @@
 					Developer with over <? echo myAge('2001-05-01'); ?> years of experience building web based products. I have worked as a web developer for design agencies, a communications bureau and also as a freelancer. I care about the complete development process. I am not only involved in technical realisation but I am also capable of playing a role in the design process as well as running agile projects with clients. I like to be involved in the projects I work on.	
 				</p> 
 				<p>
-					Especially while working at my latest employer, design agency <a href="http://www.zinnebeeld.nl/" target="_blank">zinnebeeld</a> in Rotterdam, I have found the opportunity to develop myself beyond writing code and gained a lot of experience in  the full process of project realisation.
+					Especially while working at my latest employer, design agency <a href="http://www.zinnebeeld.nl/">zinnebeeld</a> in Rotterdam, I have found the opportunity to develop myself beyond writing code and gained a lot of experience in  the full process of project realisation.
 				</p>
 				<p class="centered c2a">
 					Want to know more about how I work?<br/>Take a look at
