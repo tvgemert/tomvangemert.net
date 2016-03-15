@@ -49,6 +49,8 @@
 			$include = '404.php';
 			break;		
 	}
+	
+	$bodyId = ($params['get0']) ? $params['get0'] : 'home';
 
 	include('functions.php');	
 	if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')

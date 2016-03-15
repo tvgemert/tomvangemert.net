@@ -12,7 +12,7 @@
 					Especially while working at my latest employer, design agency <a href="http://www.zinnebeeld.nl/" target="_blank">zinnebeeld</a> in Rotterdam, I have found the opportunity to develop myself beyond writing code and gained a lot of experience in  the full process of project realisation.
 				</p>
 				<p class="centered c2a">
-					<b>Want to know more about how I work?<br/>Take a look at my</b>
+					Want to know more about how I work?<br/>Take a look at
 				</p>
 				<a href="/skills" class="nav button">skills and experience</a>
 			</div>

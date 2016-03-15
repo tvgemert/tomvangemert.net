@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index,follow">
-	<meta name="description" content="I'm Tom van Gemert a web developer based in berlin. I create usable and accessible web products.">
+	<meta name="description" content="I'm Tom van Gemert, independent all-round web developer based in berlin. I create usable and accessible web products.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Tom van Gemert. Web developer in Berlin, Germany.</title>
@@ -45,4 +45,4 @@
 	</script>	
 	
 </head>
-<body>
+<body id="<?=$bodyId?>">

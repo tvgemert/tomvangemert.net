@@ -11,9 +11,10 @@
 				</h1>
 			<ul id="navigation">
 				<li><a data-page ="home" href="/" class="nav<?=($params['get0'] == '') ? ' active' : '';?>">home</a></li>
-				<li><a data-page ="about" href="/about" class="nav<?=($params['get0'] == 'about') ? ' active' : '';?>">about me</a></li>
-				<li><a data-page ="skills" href="/skills" class="nav<?=($params['get0'] == 'skills') ? ' active' : '';?>">skills</a></li>
+				<li><a data-page ="skills" href="/skills" class="nav<?=($params['get0'] == 'skills') ? ' active' : '';?>">how</a></li>
+				<li><a data-page ="work" href="/work" class="nav<?=($params['get0'] == 'work') ? ' active' : '';?>">work</a></li>				
 				<li><a data-page ="contact" href="/contact" class="nav<?=($params['get0'] == 'contact') ? ' active' : '';?>">contact</a></li>				
+				<li><a data-page ="about" href="/about" class="nav<?=($params['get0'] == 'about') ? ' active' : '';?>">about</a></li>								
 			</ul>			
 		</div>
 	</header>

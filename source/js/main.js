@@ -24,6 +24,7 @@ $(document).ready(function() {
 		hrefparts = href.split('/');
 		if (hrefparts[1]=='') hrefparts[1] = 'home';
 		
+		$('body').attr('id',hrefparts[1]);
 		$('.nav').removeClass('active');
 		$('.nav[data-page = '+hrefparts[1]+']').addClass('active');
 		
@@ -31,7 +32,7 @@ $(document).ready(function() {
 			type: 'get',
 			url: href,
 			success: function(result){
-				$('#container section').fadeOut('fast',function(){
+				$('#container section').fadeOut(200,function(){
 					$('#container').html(result);
 				});			
 			}								
