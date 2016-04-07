@@ -17,7 +17,17 @@ $(document).ready(function() {
 			history.pushState(null, document.title, href);
 		}		
 		loadContent(href);					
-	});	
+	});		
+	
+	//On clicking back and forward.
+	//First check for history existence to prevent script errors in IE
+	//IE 9< uses page reloads as a fallback.	
+	if (!!(window.history && history.pushState)) {
+		window.addEventListener('popstate', function(event) {
+			href = document.location.pathname;
+			loadContent(href);
+		});
+	}	
 	
 	function loadContent(href) {
 		//Read and split the current URL
@@ -27,7 +37,7 @@ $(document).ready(function() {
 		$('body').attr('id',hrefparts[1]);
 		$('.nav').removeClass('active');
 		$('.nav[data-page = '+hrefparts[1]+']').addClass('active');
-		
+				
 	   	$.ajax({
 			type: 'get',
 			url: href,
@@ -36,53 +46,8 @@ $(document).ready(function() {
 					$('#container').html(result);
 					$("html, body").animate({ scrollTop: 0 }, 200);
 				});			
-			}								
+			}							
 		});		
-	}
-    
-/*
-	$(document.body).on('click', '#scroll', function() {
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false;
-	}); 
-*/   
-	
-	//On clicking back and forward.
-	//First check for history existence to prevent script errors in IE
-	//IE 9< uses page reloads as a fallback.
-/*
-	if (!!(window.history && history.pushState)) {
-		window.addEventListener('popstate', function(event) {
-			href = document.location.pathname;
-			loadContent(href);
-		});
-	}	
-		 
-	//Flipping header animation	 
-	$('h1').hover(function(){
-		animateHeadline($('.headline'));		
-	})
-	 
-	function animateHeadline($headlines) {
-		$headlines.each(function(){
-			var headline = $(this);
-			//trigger animation
-			setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, 100);
-		});
-	}	
-	function hideWord($word) {
-		var nextWord = takeNext($word);
-		switchWord($word, nextWord);
-	}
-	 
-	function takeNext($word) {
-		return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
-	}
-	 
-	function switchWord($oldWord, $newWord) {
-		$oldWord.removeClass('is-visible').addClass('is-hidden');
-		$newWord.removeClass('is-hidden').addClass('is-visible');
-	}
-*/	
+	} 
 	
 });
