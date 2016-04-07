@@ -1,6 +1,6 @@
 	<header>
 		<div id="head">
-			<h1 class="headline rotate-1">
+			<h1 class="headline">
 				<a href="/" class="nav">
 					Tom van Gemert<br/>web developer based in berlin.
 				</a>

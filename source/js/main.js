@@ -42,12 +42,22 @@ $(document).ready(function() {
 			type: 'get',
 			url: href,
 			success: function(result){
-				$('#container section').fadeOut(200,function(){
-					$('#container').html(result);
-					$("html, body").animate({ scrollTop: 0 }, 200);
-				});			
+				fillContent(result);
+			},
+			error: function(xhr, status, error) {
+				if (xhr.status == '404') {
+					fillContent(xhr.responseText);
+					//console.log(xhr.responseText);
+				}
 			}							
 		});		
 	} 
+	
+	function fillContent(result) {
+		$('#container section').fadeOut(200,function(){
+			$('#container').html(result);
+			$("html, body").animate({ scrollTop: 0 }, 200);
+		});			
+	}
 	
 });
