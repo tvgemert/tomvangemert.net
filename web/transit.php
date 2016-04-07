@@ -19,7 +19,7 @@
 				TRANSIT (TRANsformative Social Innovation Theory) is an ambitious research project that will develop a theory of transformative social innovation which is about empowerment and change in society.
 			</p>
 			<p>
-				For the TRANSIT research group at the Erasmus University in Rotterdam Zinnebeeld has developed an online identity, website and a searchable research database. I have been closely involved in the development process of the website providing consulting sessions and advice on the structuring of the online research documents database.
+				For the TRANSIT research group at the Erasmus University in Rotterdam Zinnebeeld has developed an online identity, website and a searchable research database. I have been closely involved in the development process of the website providing consulting sessions and advice on structuring of the online research documents database.
 			</p>
 			<p>
 				Today the project is still running and I am in the process of developing a database for the storage of qualitative research data and creating a front-end that offers a searchable and relatable visual representation.

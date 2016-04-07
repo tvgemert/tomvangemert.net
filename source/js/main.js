@@ -47,7 +47,6 @@ $(document).ready(function() {
 			error: function(xhr, status, error) {
 				if (xhr.status == '404') {
 					fillContent(xhr.responseText);
-					//console.log(xhr.responseText);
 				}
 			}							
 		});		
