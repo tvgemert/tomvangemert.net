@@ -1,8 +1,13 @@
 //Main color definitions
-@text-color: #000000;
-@highlight-color: #ff00cc;
+@color-yellow: #ffe581;
+@color-blue: #81daff;
+@color-green: #81ff9c;
+@color-red: #ff6035;
+
+//Images path
 @images: "../gfx";
 
+//Includes
 @import (less) "fonts.less";
 @import (css) "bootstrap.min.css";
 
@@ -109,7 +114,7 @@ body {
 }
 
 header {
-	background-color: fade(#FFE581, 60%);
+	background-color: fade(@color-green, 50%);	
     transition: background-color .4s ease-out;
     -moz-transition: background-color .4s ease-out;
     -webkit-transition: background-color .4s ease-out;
@@ -118,7 +123,7 @@ header {
 	#head {
 		margin: 0 auto;
 		max-width: 900px;		
-		border-bottom: 2px solid fade(#000000, 10%);		
+		border-bottom: 2px solid fade(#000000, 10%);
 		h1 {
 			font-family: "soleil", arial, sans-serif;
 			font-size: 64px;
@@ -154,18 +159,31 @@ header {
 			margin-right: 0;
 		}	
 	}
+	#head.project {
+		h1 {
+			padding-bottom: 154px;
+		}
+	}
+}
+
+/*
+* Header color definitions
+*/
+
+#home header {
+	background-color: fade(@color-green, 50%);
 }
 
 #skills header,
 #about header {
-	background-color: fade(#81daff, 50%);	
+	background-color: fade(@color-green, 50%);	
 }
 #work header {
-	background-color: fade(#81ff9c, 40%);
+	background-color: fade(@color-green, 50%);
 }
 
 #contact header {
-	background-color: fade(#ff6035, 25%);
+	background-color: fade(@color-green, 50%);
 }
 
 
@@ -181,7 +199,7 @@ section {
 		ul.work li {
 			margin-bottom: 15px;
 		}
-		p.small {
+		.small {
 			font-size: 14px;
 			line-height: 23px;
 			margin: 0px 10px 23px 10px;
@@ -220,7 +238,14 @@ section {
 			display: inline-block;
 			width: 25%;	
 			margin-right: 0px;
-		}	
+			padding-bottom: 27px;
+		}
+		ul li p.desc {	
+			margin-top: 10px;
+			text-align: center;
+			font-size: 14px;
+			line-height: 20px;	
+		}
 		ul li a {
 			text-decoration: none;
 			color: fade(#000000, 50%);
@@ -239,15 +264,54 @@ section {
 		    -webkit-transition: all .2s ease-out;
 		    -o-transition: all .2s ease-out;				
 		}
+		ul li.overview img {
+			zoom: 20%;	
+			-moz-transform: scale(0.2);		
+			margin: 0 20px 20px 20px;	
+		}
 		ul li:hover img {	
 			-webkit-filter: grayscale(0%);
 			filter: grayscale(0%);	
 			opacity: 1;			
 		}
 	}
+	.screenshots {
+		margin: 0 auto;
+		max-width: 900px;	
+		text-align: left;
+		margin-top: -100px;
+		position: relative;
+		padding-bottom: 13px;
+		img {
+			border: 2px solid fade(#000000, 10%);			
+			max-width: 600px;			
+		}			
+	}
+	.screenshots.full-mobile {
+		img.full {
+			margin-left: 70px;
+		}		
+		img.mobile {
+			max-width: 200px;
+			position: absolute;
+			top: 70px;
+			right: 70px;
+		}			
+	}
+	.screenshots.full-screen {
+		img.full {
+			margin-left: 20px;
+		}					
+		img.screen {
+			max-width: 350px;
+			position: absolute;
+			top: 60px;
+			right: 20px;			
+		}			
+	}			
 }
 
-section#work {
+section#projects {
 	ul li {
 		margin-bottom: 13px;
 	}
@@ -314,6 +378,10 @@ p, ul {
 	margin: 0px 10px 27px 10px;
 }
 
+ul {
+	padding-left: 30px;
+}
+
 p.larger {
 	font-size: 22px;
 	line-height: 32px;
@@ -330,6 +398,10 @@ p.larger {
 	}
 }
 
+.content:hover p,
+.content:hover ul {
+	color: #000;
+}
 
 //FOUT fix for Typekit
 .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading p, .wf-loading ul {
@@ -371,8 +443,9 @@ h3 {
 */
 
 a, 
-a:link {
-	color: #000;
+a:link,
+a:visited {
+	color: #333;
 	text-decoration: underline;
     transition: color .2s ease-out;
     -moz-transition: color .2s ease-out;
@@ -381,8 +454,7 @@ a:link {
 }
 
 a:hover, 
-a:active, 
-a:visited {
+a:active {
 	color: #000;
 }
 
@@ -406,13 +478,14 @@ a.button {
 	border: 2px solid fade(#000000, 50%);
 	padding: 7px 15px 10px 15px;
 	margin-bottom: 27px;
-	color: fade(#000000, 60%);
+	color: fade(#000000, 50%);
 	text-decoration: none;
 	.border-radius();
 }
 
-a.button:hover {
+a.button:hover,
+.content:hover a.button {
 	border-color: #000;
-	background-color: #000;
-	color: #fff;	
+ 	background-color: #fff;
+	color: #000;	
 }

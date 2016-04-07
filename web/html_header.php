@@ -46,3 +46,4 @@
 	
 </head>
 <body id="<?=$bodyId?>">
+	<div id="container">

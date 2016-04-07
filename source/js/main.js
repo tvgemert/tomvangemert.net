@@ -34,14 +34,23 @@ $(document).ready(function() {
 			success: function(result){
 				$('#container section').fadeOut(200,function(){
 					$('#container').html(result);
+					$("html, body").animate({ scrollTop: 0 }, 200);
 				});			
 			}								
 		});		
 	}
+    
+/*
+	$(document.body).on('click', '#scroll', function() {
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false;
+	}); 
+*/   
 	
 	//On clicking back and forward.
 	//First check for history existence to prevent script errors in IE
 	//IE 9< uses page reloads as a fallback.
+/*
 	if (!!(window.history && history.pushState)) {
 		window.addEventListener('popstate', function(event) {
 			href = document.location.pathname;
@@ -73,6 +82,7 @@ $(document).ready(function() {
 	function switchWord($oldWord, $newWord) {
 		$oldWord.removeClass('is-visible').addClass('is-hidden');
 		$newWord.removeClass('is-hidden').addClass('is-visible');
-	}	
+	}
+*/	
 	
 });

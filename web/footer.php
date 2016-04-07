@@ -1,4 +1,3 @@
-	</div>
 	<footer>
 		<div id="foot">
 			<ul class="networks small">

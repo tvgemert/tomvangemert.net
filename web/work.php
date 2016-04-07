@@ -1,17 +1,19 @@
-		<section id="work">
-			<div class="content">
-				<h2>projects I've worked on</h2>
-				<p>
-					The following list features projects I have worked on together with the team at design agency <a href="http://www.zinnebeeld.nl">Zinnebeeld</a> in Rotterdam.
-				</p>
-				<ul>
-					<li><a href="http://www.design-call-berlin.de/"><b>Design Call Berlin</b></a><br/>Freelance project. Design and realisation of the website.</li>
-					<li><a href="http://www.2016arita.com/"><b>2016 Arita</b></a><br/>Website. Traditional Japanese pottery craft combined with contemporary designers.</li>		
-					<li><a href="http://www.mypsup.org/"><b>MyPSUP</b></a> (UN Habitat)<br/>Online disucssion platform and E-Learning tool for a United Nations program.</li>
-					<li><a href="http://www.cxcompany.com"><b>CX Company</b></a><br/>Realisation of new website for a customer experience developer.</li>
-					<li><a href="http://www.cultuur-ondernemen.nl"><b>Cultuur+Ondernemen</b></a><br/>Realisation of new website including webshop for a Dutch cultural foundation.</li>
-					<li><a href="http://www.transitsocialinnovation.eu/"><b>TRANSIT</b></a> (TRANsformative Social Innovation Theory)<br/>Development of website and research database for a European research institute.</li>
-					<li><b>Content Management System</b><br/>Design, development and continuos improvement of Zinnebeeld's Content Management System FLIP.</li>
-				</ul>
-			</div>
-		</section>
+	<section id="work">
+		<div class="content">
+			<h2>projects I've worked on</h2>
+			<p>
+				The following list features freelance projects, and projects realised while working at design agency <a href="http://www.zinnebeeld.nl">Zinnebeeld</a> in Rotterdam. Please click for more information.
+			</p>
+	</section>
+	<section id="projects">
+		<div class="work">
+			<ul class="work">
+				<li><a href="/work/design-call-berlin" data-page ="work/design-call-berlin" class="nav"><img src="/web/gfx/work/design-call-berlin.png" alt="Design Call Berlin website" /><br/>Design Call Berlin</a></li>
+				<li><a href="/work/2016-arita" data-page ="work/2016-arita" class="nav"><img src="/web/gfx/work/2016-arita.png" alt="2016 Arita website" /><br/>2016 Arita</a></li>
+				<li><a href="/work/my-psup" data-page ="work/my-psup" class="nav"><img src="/web/gfx/work/mypsup.png" alt="UN Habitat MyPSUP e-learning platform" /><br/>UN Habitat</a></li>			
+				<li><a href="/work/cx-company" data-page ="work/cx-company" class="nav"><img src="/web/gfx/work/cx-company.png" alt="CX Company website" /><br/>CX Company</a></li>
+				<li><a href="/work/besteburen" data-page ="work/besteburen" class="nav"><img src="/web/gfx/work/beste-buren.png" alt="Campaign for cultural and creative collaboration between the Netherlands and Belgium" /><br/>BesteBuren</a></li>				
+				<li><a href="/work/transit" data-page ="work/transit" class="nav"><img src="/web/gfx/work/transit.png" alt="Development of website and research database for a European research institute." /><br/>TRANSIT</a></li>		
+			</ul>	
+		</div>
+	</section>

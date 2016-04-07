@@ -17,16 +17,19 @@
 	}	
 	
 	$params = ConvertURL();
-	$showFooter = true;
+	$loadFooter = true;
+	$loadHeader = true;	
+	$customHeader = '';
 	
 	switch ($params['get0']) {
 		case 'work':
 			if (isset($params['get1'])) {
-				if (file_exists($params['get1'].'.inc.php')) {
-					$include = $params['get1'].'.inc.php';		
+				if (file_exists($params['get1'].'.php')) {
+					$loadHeader = false;	
+					$include = $params['get1'].'.php';		
 				} else {
 					header('HTTP/1.0 404 Not Found');		
-					$include = '404.php';					
+					$include = '404.php';				
 				}	
 			} else {
 				$include = 'work.php';
@@ -51,19 +54,19 @@
 	}
 	
 	$bodyId = ($params['get0']) ? $params['get0'] : 'home';
-
 	include('functions.php');	
+
 	if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
 	{
 		include('html_header.php');
-		include('header.php');
 	}
-	
+
+	if ($loadHeader) include('header.php');	
 	include($include);	
+	if ($loadFooter) include('footer.php');	
 	
 	if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
 	{
-	 	if ($showFooter) include('footer.php');
 		include('html_footer.php');
 	}
 
