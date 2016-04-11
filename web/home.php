@@ -12,8 +12,8 @@
 			<h2>projects I've worked on</h2>
 			<ul class="work">
 				<li><a href="/work/design-call-berlin" data-page ="work/design-call-berlin" class="nav"><img src="/web/gfx/work/design-call-berlin.png" alt="Design Call Berlin website" /><br/>Design Call Berlin</a></li>
-				<li><a href="/work/2016-arita" data-page ="work/2016-arita" class="nav"><img src="/web/gfx/work/2016-arita.png" alt="2016 Arita website" /><br/>2016 Arita</a></li>		
-				<li><a href="/work/mypsup" data-page ="work/mypsup" class="nav"><img src="/web/gfx/work/mypsup.png" alt="UN Habitat MyPSUP e-learning platform" /><br/>UN Habitat</a></li>			
+				<li class="m-hide"><a href="/work/2016-arita" data-page ="work/2016-arita" class="nav"><img src="/web/gfx/work/2016-arita.png" alt="2016 Arita website" /><br/>2016 Arita</a></li>
+				<li><a href="/work/my-psup" data-page ="work/my-psup" class="nav"><img src="/web/gfx/work/mypsup.png" alt="UN Habitat MyPSUP e-learning platform" /><br/>UN Habitat</a></li>			
 			</ul>
 		</div>
 	</section>	

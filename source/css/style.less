@@ -21,6 +21,12 @@
   @media screen and (max-width: 500px) { @rules(); }
 }
 
+.m-hide {
+	.breakpoint-small({
+		display: none !important;
+	});
+}
+
 /*
 * Also a comment, block level
 * The magic starts here
@@ -52,6 +58,7 @@ body {
 
 //Rotating text in header
 
+/*
 .headline.rotate-1 .words-wrapper {
   display: inline-block;
   perspective: 1000px;
@@ -112,6 +119,7 @@ body {
     opacity: 0;
   }
 }
+*/
 
 header {
 	background-color: fade(@color-green, 50%);	
@@ -132,7 +140,7 @@ header {
 			padding: 54px 100px;
 			.breakpoint-small({
 				font-size: 32px;
-				padding: 20px 20px;
+				padding: 20px 20px 10px 20px;
 			});			
 		}	
 		ul#navigation {
@@ -162,6 +170,9 @@ header {
 	#head.project {
 		h1 {
 			padding-bottom: 154px;
+			.breakpoint-small({
+				padding: 40px 20px 140px 20px;
+			});
 		}
 	}
 }
@@ -191,23 +202,16 @@ header {
 section {
 	.content {	
 		margin: 0 auto;
-		padding-top: 54px;
+		padding: 54px 10px 0px 10px;
 		max-width: 580px;
 		.breakpoint-small({
-			padding-top: 40px;
+			padding: 40px 20px 0px 20px;
 		});					
-		ul.work li {
-			margin-bottom: 15px;
-		}
 		.small {
 			font-size: 14px;
 			line-height: 23px;
-			margin: 0px 10px 23px 10px;
+			margin-bottom: 23px;
 		}
-		p.colophon {
-			margin-left: 80px;
-			margin-right: 80px;
-		}	
 		p.centered {
 			text-align: center;
 		}	
@@ -216,9 +220,6 @@ section {
 			margin-top: 54px;
 			margin-bottom: 14px;
 		}		
-		ul {
-			margin: 0px 0px 27px 0px;
-		}
 		h2:first-child {
 			margin-top: 0px;
 		}
@@ -239,6 +240,9 @@ section {
 			width: 25%;	
 			margin-right: 0px;
 			padding-bottom: 27px;
+			.breakpoint-small({
+				width: 40%;
+			});
 		}
 		ul li p.desc {	
 			margin-top: 10px;
@@ -280,16 +284,24 @@ section {
 		max-width: 900px;	
 		text-align: left;
 		margin-top: -100px;
+		padding: 0px 20px 0px 20px;
 		position: relative;
 		padding-bottom: 13px;
+		.breakpoint-small({
+			padding-bottom: 0;
+		});
 		img {
-			border: 2px solid fade(#000000, 10%);			
+			border: 2px solid fade(#000000, 10%);	
+			width: 100%;		
 			max-width: 600px;			
 		}			
 	}
 	.screenshots.full-mobile {
 		img.full {
-			margin-left: 70px;
+			margin-left: 50px;
+			.breakpoint-small({
+				margin: 0 0;
+			});
 		}		
 		img.mobile {
 			max-width: 200px;
@@ -298,10 +310,7 @@ section {
 			right: 70px;
 		}			
 	}
-	.screenshots.full-screen {
-		img.full {
-			margin-left: 20px;
-		}					
+	.screenshots.full-screen {				
 		img.screen {
 			max-width: 350px;
 			position: absolute;
@@ -359,14 +368,6 @@ footer {
 	}	
 }
 
-#colophon {	
-	.content {
-		border-top: 1px solid fade(#000000, 10%);
-		padding-top: 0px;
-		margin-top: 81px;
-	}
-}
-
 
 /*
 * Default typography
@@ -375,11 +376,15 @@ footer {
 p, ul {
 	line-height: 27px;	
 	text-align: left;
-	margin: 0px 10px 27px 10px;
+	margin-bottom: 27px;
+	.breakpoint-small({
+		font-size: 16px;
+		line-height: 23px;
+	});
 }
 
 ul {
-	padding-left: 30px;
+	padding-left: 23px;
 }
 
 p.larger {
@@ -419,9 +424,14 @@ h2 {
 	line-height: 32px;
 	border: 5px solid #000;
 	padding: 1px 10px 3px 10px;	
-	margin: 27px 10px 27px 10px;
+	margin: 27px 0px 27px 0px;
 	background-color: #000;
-	color: #fff;		
+	color: #fff;
+	.breakpoint-small({
+		font-size: 18px;
+		line-height: 27px;
+		margin: 23px 0px 23px 0px;		
+	});			
 }
 
 h3 {
@@ -430,7 +440,7 @@ h3 {
 	line-height: 25px;
 	border: 5px solid #000;
 	padding: 1px 10px 3px 10px;	
-	margin: 25px 10px 25px 10px;
+	margin: 25px 0px 25px 0px;
 	background-color: #000;
 	color: #fff;		
 }
